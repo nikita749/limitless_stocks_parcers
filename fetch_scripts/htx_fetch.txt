@@ -1,0 +1,23 @@
+return fetch("https://www.htx.com/-/x/hbg/v1/app/new/queryWebRankings?x-b3-traceid=aac8d844b87b8b00e5a489f94a81838c", {
+  "headers": {
+    "accept": "*/*",
+    "accept-language": "ru-RU",
+    "hb-api-version": "1.7",
+    "hb-pro-token": "",
+    "huobi-app-client": "4",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?1",
+    "sec-ch-ua-platform": "\"Android\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-kl-ajax-request": "Ajax_Request"
+  },
+  "referrer": "https://www.htx.com/ru-ru",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}).then(response => response.json());

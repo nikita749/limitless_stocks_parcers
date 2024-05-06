@@ -1,0 +1,28 @@
+return fetch("https://www.okx.com/v2/support/info/announce/listProject?t=1714953077178", {
+  "headers": {
+    "accept": "application/json",
+    "accept-language": "ru-RU,ru;q=0.9,en-GB;q=0.8,en;q=0.7,uk-UA;q=0.6,uk;q=0.5,en-US;q=0.4",
+    "app-type": "web",
+    "devid": "2306e111-1cbe-44e9-a023-46e75a4bb66c",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "x-cdn": "https://www.okx.com",
+    "x-id-group": "1040549530739780001-c-7",
+    "x-kl-ajax-request": "Ajax_Request",
+    "x-locale": "ru_RU",
+    "x-site-info": "=0HOxojI5RXa05WZiwiIMFkQPx0Rfh1SPJiOiUGZvNmIsISVSJiOi42bpdWZyJye",
+    "x-utc": "3",
+    "x-zkdex-env": "0"
+  },
+  "referrer": "https://www.okx.com/ru/markets/prices",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}).then(response => response.json());

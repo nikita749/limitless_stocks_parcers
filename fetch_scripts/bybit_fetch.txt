@@ -1,0 +1,21 @@
+return fetch("https://api2.bybit.com/spot/api/quote/v1/multi/kline?symbol=BTCUSDT,ETHUSDT,ETHUSDC,BTCUSDC,SOLUSDT,USDCUSDT,PEPEUSDT,MNTUSDT,XRPUSDT,STETHUSDT,DOGEUSDT,TONUSDT,OPUSDT,APEXUSDT,ONDOUSDT,ZETAUSDT,NEARUSDT,WUSDT,ADAUSDT,BONKUSDT&exchangeId=301&interval=1h&limit=24", {
+  "headers": {
+    "accept": "application/json, text/plain, */*",
+    "accept-language": "ru-RU,ru;q=0.9,en-GB;q=0.8,en;q=0.7,uk-UA;q=0.6,uk;q=0.5,en-US;q=0.4",
+    "guid": "d989525f-3982-bc0c-b2a5-ae067e9fec19",
+    "priority": "u=1, i",
+    "sec-ch-ua": "\"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"",
+    "sec-ch-ua-mobile": "?0",
+    "sec-ch-ua-platform": "\"Windows\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-site",
+    "traceparent": "00-b40b0ca9c98fe844312efea568de5927-d495569828648b2a-00"
+  },
+  "referrer": "https://www.bybit.com/",
+  "referrerPolicy": "strict-origin-when-cross-origin",
+  "body": null,
+  "method": "GET",
+  "mode": "cors",
+  "credentials": "include"
+}).then(response => response.json());
