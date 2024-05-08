@@ -6,6 +6,8 @@ from urllib.request import urlopen
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
+from configuration import *
+
 
 def open_browser(url):
   options = Options()
@@ -34,7 +36,10 @@ class Binance:
     output_data = {}
     for el in result:
       if (accepted_prefix in el["symbol"]):
-        output_data[el["symbol"].replace(accepted_prefix, "").lower()] = float(el["price"])
+        formated_currency = el["symbol"].replace(accepted_prefix, "").lower()
+
+        if (formated_currency in accepted_cryptoCurrencies):
+          output_data[formated_currency] = float(el["price"])
 
     save_to_file(is_file, output_data)
 
@@ -52,7 +57,9 @@ class HTX:
 
     output_data = {}
     for i in result["data"][0]["singleList"]:
-      output_data[i["baseCurrency"]] = float(i['price'])
+      formated_currency = i["baseCurrency"]
+      if (formated_currency in accepted_cryptoCurrencies):
+        output_data[formated_currency] = float(i['price'])
 
     save_to_file(is_file, output_data)
 
@@ -72,7 +79,10 @@ class ByBit:
     output_data = {}
     for key, value in result["result"].items():
       if (accepted_prefixe in key):
-        output_data[key.replace(accepted_prefixe, "").lower()] = float(value[-1]['c'])
+        formated_currency = key.replace(accepted_prefixe, "").lower()
+
+        if (formated_currency in accepted_cryptoCurrencies):
+          output_data[formated_currency] = float(value[-1]['c'])
 
     save_to_file(is_file, output_data)
 
@@ -89,8 +99,10 @@ class KuCoin:
     output_data = {}
 
     for key, value in result["data"].items():
-      output_data[key.lower()] = float(value)
+      formated_currency = key.lower()
 
+      if (formated_currency in accepted_cryptoCurrencies):
+        output_data[formated_currency] = float(value)
 
     save_to_file(is_file, output_data)
 
@@ -107,11 +119,11 @@ class OKX:
     output_data = {}
 
     for i in result["data"]['list']:
-      output_data[i['project'].lower()] = float(i['last'])
+      formated_currency = i['project'].lower()
+
+      if (formated_currency in accepted_cryptoCurrencies):
+        output_data[formated_currency] = float(i['last'])
 
     save_to_file(is_file, output_data)
 
     return output_data
-
-
-
